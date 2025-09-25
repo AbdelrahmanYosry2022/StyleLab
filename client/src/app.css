@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+.app { display: flex; flex-direction: column; height: 100%; }
+.app__header { padding: 12px 16px; font-weight: 600; border-bottom: 1px solid #e5e7eb; background: #fafafa; }
+.app__main { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; height: calc(100% - 50px); }
+.app__left { display: flex; flex-direction: column; gap: 16px; overflow: auto; }
+.app__right { display: flex; flex-direction: column; gap: 12px; overflow: auto; }
+
+.panel { border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; background: #fff; }
+.panel__title { font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #111827; }
+
+.fileupload__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.fileupload__item { display: flex; flex-direction: column; gap: 6px; }
+.fileupload__item textarea { width: 100%; height: 140px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; }
+
+.controls__list { display: flex; flex-direction: column; gap: 8px; max-height: 40vh; overflow: auto; }
+.control__row { display: grid; grid-template-columns: 160px 1fr 90px; align-items: center; gap: 8px; }
+.control__row input[type="text"], .control__row select, .control__row input[type="number"] { width: 100%; padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 6px; }
+.control__row input[type="range"] { width: 100%; }
+
+.preview { flex: 1; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; height: 50vh; }
+
+.tokens__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.token__item { padding: 8px; border: 1px dashed #e5e7eb; border-radius: 6px; font-size: 12px; }
+
+.export__row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.version__list { display: flex; flex-direction: column; gap: 6px; max-height: 180px; overflow: auto; }
+.version__item { display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 6px; }
